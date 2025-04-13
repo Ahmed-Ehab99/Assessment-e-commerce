@@ -48,7 +48,7 @@ const CartDetails = () => {
       setProductDetails({});
       setLoadingProducts(false);
     }
-  }, [i18n.language, cartItemIds.join(",")]);
+  }, [i18n.language, cartItemIds.join(","), cartItemIds]);
 
   const increaseQuantity = useCallback(
     (productId: string) => {

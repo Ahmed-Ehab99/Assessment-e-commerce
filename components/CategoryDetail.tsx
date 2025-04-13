@@ -95,7 +95,7 @@ const CategoryDetail = ({ id }: { id: string }) => {
         </div>
       )
     );
-  }, [[category, isLoading, isError, error]]);
+  }, [category, isLoading, isError, error, t, i18n.language]);
 
   return (
     <section className="relative overflow-hidden">

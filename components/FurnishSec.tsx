@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { MoveLeft, MoveRight } from "lucide-react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 const SecHeading = dynamic(() => import("@/components/SecHeading"), {
   ssr: false,
@@ -32,7 +33,7 @@ const FurnishSec = () => {
             {t("home.furnish.subTitle")}
           </p>
           <div className="flex w-full">
-            <a href="/shop" className="flex w-fit gap-5">
+            <Link href="/shop" className="flex w-fit gap-5">
               <span className="text-sm font-normal text-[#E58411]">
                 {t("home.moreInfo")}
               </span>
@@ -41,7 +42,7 @@ const FurnishSec = () => {
               ) : (
                 <MoveRight color="#E58411" />
               )}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

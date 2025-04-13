@@ -43,7 +43,7 @@ const ProductDetail = ({ id }: { id: string }) => {
     isError,
     error,
   } = useQuery({
-    queryKey: ["product", i18n.language],
+    queryKey: ["product", i18n.language, id],
     queryFn: () => getProductById(id, i18n.language),
   });
 

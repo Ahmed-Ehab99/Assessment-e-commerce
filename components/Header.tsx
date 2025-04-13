@@ -26,7 +26,7 @@ import { SignOutApiResponse } from "@/types";
 import Cookies from "js-cookie";
 import { useCart } from "@/hooks/use-cart";
 import { cn } from "@/lib/utils";
-import { useCallback, useMemo, useTransition } from "react";
+import { useMemo, useTransition } from "react";
 
 const Header = () => {
   const authToken = Cookies.get("authToken");
@@ -80,9 +80,9 @@ const Header = () => {
     },
   });
 
-  const handleSignOutClick = useCallback(() => {
+  const handleSignOutClick = () => {
     signOutMutation.mutate();
-  }, [signOutMutation]);
+  };
 
   return (
     <header className="absolute left-0 right-0 top-0 z-50 bg-transparent">

@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import React from "react";
 
 interface FeatuersCardProps {
   className: string;
@@ -7,7 +6,7 @@ interface FeatuersCardProps {
   subTitle: string;
 }
 
-const FeatuersCard = React.memo(({ className, title, subTitle }: FeatuersCardProps) => {
+const FeatuersCard = ({ className, title, subTitle }: FeatuersCardProps) => {
   return (
     <div
       className={cn(className, "flex h-[476px] items-end rounded-2xl bg-cover bg-center bg-no-repeat p-6 shadow-2xl")}
@@ -20,6 +19,6 @@ const FeatuersCard = React.memo(({ className, title, subTitle }: FeatuersCardPro
       </div>
     </div>
   );
-});
+};
 
 export default FeatuersCard;

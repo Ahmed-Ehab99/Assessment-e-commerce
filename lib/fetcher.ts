@@ -23,7 +23,7 @@ export const fetcher = async <T>(
     },
   });
 
-  let result: ApiResponse<T> = await res.json();
+  const result: ApiResponse<T> = await res.json();
 
   if (!res.ok || !result.isSuccessful) {
     throw new Error(

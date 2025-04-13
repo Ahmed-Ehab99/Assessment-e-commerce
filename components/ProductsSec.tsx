@@ -40,7 +40,7 @@ const ProductsSec = ({ categoryID }: { categoryID: number | undefined }) => {
         return response.data;
       }
       throw new Error(response.data.message || "Could not retrieve products.");
-    }, [lang]),
+    }, [lang, categoryID, page]),
     staleTime: 5 * 60 * 1000,
     retry: 2,
     enabled: !!categoryID,

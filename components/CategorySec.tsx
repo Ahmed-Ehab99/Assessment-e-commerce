@@ -75,7 +75,7 @@ const CategorySec = React.memo(() => {
         <CategoriesCard key={category.id} category={category} />
       ))
     );
-  }, [[categories, isLoading, isError, error]]);
+  }, [categories, isLoading, isError, error]);
 
   return (
     <section

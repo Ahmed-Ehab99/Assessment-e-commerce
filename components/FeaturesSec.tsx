@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 const SecHeading = dynamic(() => import("@/components/SecHeading"), {
@@ -11,7 +11,7 @@ const FeatuersCard = dynamic(() => import("@/components/FeatuersCard"), {
   ssr: false,
 });
 
-const FeaturesSec = React.memo(() => {
+const FeaturesSec = () => {
   const { t } = useTranslation();
   const features = useMemo(
     () =>
@@ -44,6 +44,6 @@ const FeaturesSec = React.memo(() => {
       </div>
     </section>
   );
-});
+};
 
 export default FeaturesSec;

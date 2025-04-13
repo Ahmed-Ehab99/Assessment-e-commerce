@@ -1,10 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
 import { useTranslation } from "react-i18next";
 
-const HeroSec = React.memo(() => {
+const HeroSec = () => {
   const { t } = useTranslation();
 
   return (
@@ -29,6 +28,6 @@ const HeroSec = React.memo(() => {
       </div>
     </section>
   );
-});
+};
 
 export default HeroSec;
