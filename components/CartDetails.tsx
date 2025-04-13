@@ -48,7 +48,7 @@ const CartDetails = () => {
       setProductDetails({});
       setLoadingProducts(false);
     }
-  }, [i18n.language, cartItemIds.join(","), cartItemIds]);
+  }, [i18n.language, cartItemIds]);
 
   const increaseQuantity = useCallback(
     (productId: string) => {

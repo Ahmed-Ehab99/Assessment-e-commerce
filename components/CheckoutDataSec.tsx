@@ -41,7 +41,7 @@ const CheckoutDataSec = ({ onValid, setIsStepValid }: Props) => {
 
   useEffect(() => {
     setIsStepValid(deliveryAddressForm.formState.isValid);
-  }, [deliveryAddressForm.formState.isValid]);
+  }, [deliveryAddressForm.formState.isValid, setIsStepValid]);
 
   const onDeliveryAddressSubmit = (data: DeliveryFormData) => {
     setLoading(true);

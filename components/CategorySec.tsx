@@ -18,7 +18,7 @@ const SecHeading = dynamic(() => import("@/components/SecHeading"), {
   ssr: false,
 });
 
-const CategorySec = React.memo(() => {
+const CategorySec = () => {
   const { t, i18n } = useTranslation();
   const lang = useMemo(() => i18n.language, [i18n.language]);
   const {
@@ -55,28 +55,6 @@ const CategorySec = React.memo(() => {
     retry: 2,
   });
 
-  const categoriesGrid = useMemo(() => {
-    if (isLoading) return <CategoriesCardSkeleton />;
-    if (isError)
-      return (
-        <Alert variant="destructive" className="col-span-full">
-          <AlertCircle className="h-4 w-4" />
-          <AlertDescription>
-            {error instanceof Error
-              ? error.message
-              : "An error occurred while loading categories."}
-          </AlertDescription>
-        </Alert>
-      );
-    return (
-      categories &&
-      categories.length > 0 &&
-      categories.map((category) => (
-        <CategoriesCard key={category.id} category={category} />
-      ))
-    );
-  }, [categories, isLoading, isError, error]);
-
   return (
     <section
       aria-labelledby="categories-heading"
@@ -84,11 +62,26 @@ const CategorySec = React.memo(() => {
     >
       <SecHeading id="categories-heading" text={t("home.categories.title")} />
       <div className="grid w-full grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
-        {categoriesGrid}
+        {isLoading && <CategoriesCardSkeleton />}
+        {isError && (
+          <Alert variant="destructive" className="col-span-full">
+              <AlertCircle className="h-4 w-4" />
+              <AlertDescription>
+                {error instanceof Error
+                  ? error.message
+                  : "An error occurred while loading categories."}
+              </AlertDescription>
+            </Alert>
+        )}
+        {categories &&
+              categories.length > 0 &&
+              categories.map((category) => (
+                <CategoriesCard key={category.id} category={category} />
+              ))}
       </div>
     </section>
   );
-});
+};
 
 export default CategorySec;
 
