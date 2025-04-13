@@ -17,11 +17,12 @@ export async function generateMetadata({
   };
 }
 
-export const dynamic = "force-static";
-export const revalidate = 60;
-
-const ProductDetailsPage = async ({ params }: { params: { id: string } }) => {
-  const { id } = params;
+const ProductDetailsPage = async ({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) => {
+  const { id } = await params;
 
   return <ProductDetail id={id} />;
 };
