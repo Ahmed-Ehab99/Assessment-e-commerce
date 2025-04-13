@@ -8,8 +8,8 @@ export async function generateMetadata({
 }: {
   params: { id: string };
 }): Promise<Metadata> {
-  const cookieStore = await cookies();
-  const lang = cookieStore.get("language")?.value || "en";
+  const cookieStore = cookies();
+  const lang = (await cookieStore).get("language")?.value || "en";
   const { id } = params;
   const product = await getProductById(id, lang);
   return {
