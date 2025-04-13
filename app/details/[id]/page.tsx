@@ -3,14 +3,18 @@ import { getProductById } from "@/lib/getDataById";
 import { Metadata } from "next";
 import { cookies } from "next/headers";
 
+type Params = Promise<{
+  id: string;
+}>;
+
 export async function generateMetadata({
   params,
 }: {
-  params: { id: string };
+  params: Params;
 }): Promise<Metadata> {
-  const cookieStore = cookies();
-  const lang = (await cookieStore).get("language")?.value || "en";
-  const { id } = params;
+  const cookieStore = await cookies();
+  const lang = cookieStore.get("language")?.value || "en";
+  const { id } = await params;
   const product = await getProductById(id, lang);
   return {
     title: product.title,
@@ -18,8 +22,8 @@ export async function generateMetadata({
   };
 }
 
-const ProductDetailsPage = async ({ params }: { params: { id: string } }) => {
-  const { id } = params;
+const ProductDetailsPage = async ({ params }: { params: Params }) => {
+  const { id } = await params;
 
   return <ProductDetail id={id} />;
 };
