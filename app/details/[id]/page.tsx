@@ -17,11 +17,7 @@ export async function generateMetadata({
   };
 }
 
-const ProductDetailsPage = async ({
-  params,
-}: {
-  params: { id: string };
-}) => {
+const ProductDetailsPage = async ({ params }: PropsMetadata) => {
   const { id } = params;
 
   return <ProductDetail id={id} />;
