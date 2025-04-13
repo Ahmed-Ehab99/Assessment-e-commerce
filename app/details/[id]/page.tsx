@@ -9,7 +9,7 @@ export async function generateMetadata({
 }: PropsMetadata): Promise<Metadata> {
   const cookieStore = await cookies();
   const lang = cookieStore.get("language")?.value || "en";
-  const { id } = await params;
+  const { id } = params;
   const product = await getProductById(id, lang);
   return {
     title: product.title,
@@ -20,9 +20,9 @@ export async function generateMetadata({
 const ProductDetailsPage = async ({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 }) => {
-  const { id } = await params;
+  const { id } = params;
 
   return <ProductDetail id={id} />;
 };
