@@ -1,15 +1,20 @@
 import CategoryDetail from "@/components/CategoryDetail";
 import { getCategoryById } from "@/lib/getDataById";
-import { PropsMetadata } from "@/types";
 import { Metadata } from "next";
 import { cookies } from "next/headers";
 
+type Params = Promise<{
+  id: string;
+}>;
+
 export async function generateMetadata({
   params,
-}: PropsMetadata): Promise<Metadata> {
+}: {
+  params: Params;
+}): Promise<Metadata> {
   const cookieStore = await cookies();
   const lang = cookieStore.get("language")?.value || "en";
-  const { id } = params;
+  const { id } = await params;
   const category = await getCategoryById(id, lang);
   return {
     title: category.title,
@@ -17,8 +22,8 @@ export async function generateMetadata({
   };
 }
 
-const CategoryDetailPage = async ({ params }: { params: { id: string } }) => {
-  const { id } = params;
+const CategoryDetailPage = async ({ params }: { params: Params }) => {
+  const { id } = await params;
 
   return <CategoryDetail id={id} />;
 };

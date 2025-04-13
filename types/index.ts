@@ -1,9 +1,3 @@
-export type PropsMetadata = {
-  params: {
-    id: string;
-  };
-};
-
 export type AuthFormProps = {
   onValidChange?: (valid: boolean) => void;
   disableRedirect?: boolean;
