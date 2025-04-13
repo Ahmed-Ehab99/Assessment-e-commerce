@@ -1,0 +1,145 @@
+{
+  "header": {
+    "logo": "Logo",
+    "home": "Home",
+    "shop": "Shop",
+    "search": "Search"
+  },
+  "searchSheet": {
+    "title": "Chic Furnishings Online Furniture Store",
+    "subTitle": "Discover Elegant Comfort for Every Room",
+    "description": "Discover Elegant Comfort for Every Room"
+  },
+  "menuSheet": {
+    "title": "Menu",
+    "description": "Menu",
+    "language": "Language",
+    "arabic": "AR",
+    "english": "EN",
+    "theme": "Theme",
+    "light": "Light Mode",
+    "dark": "Dark Mode"
+  },
+  "auth": {
+    "title": "Welcome to Our store",
+    "subTitle": "Bringing Your Style Home",
+    "signIn": {
+      "title": "I am already a customer",
+      "email": "E-mail Address",
+      "password": "Password",
+      "signInBtn": "Sign in"
+    },
+    "signUp": {
+      "title": "I am new to This store",
+      "subTitle": "Enjoy exclusive discounts & offers",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "E-mail Address",
+      "password": "Password",
+      "terms1": " Yes, I would like to receive personalized offers, tips and tricks, and other information from Store.",
+      "terms2": "The terms and conditions for Dubai Perfumes apply. Here you can find our",
+      "privacy": "privacy information.",
+      "signUpBtn": "Sign up"
+    }
+  },
+  "home": {
+    "moreInfo": "More Info",
+    "hero": {
+      "title": "Make your interior more minimalistic & modern",
+      "subTitle": "Turn your room with panto into a lot more minimalist and modern with ease and speed"
+    },
+    "categories": {
+      "title": "Our Categories"
+    },
+    "furnish": {
+      "title": "Furnish Your Dreams, Choose Wisely",
+      "subTitle": "Discover quality furniture, curated styles, and exceptional service at Our Store. We make furnishing your home easy and enjoyable."
+    },
+    "features": {
+      "subTitle": "some of our",
+      "title": "Features we offer to you",
+      "card": [
+        {
+          "title": "Extensive Catalog",
+          "subTitle": "A wide selection of furniture styles, categories, and price points."
+        },
+        {
+          "title": "Detailed Product Descriptions",
+          "subTitle": "Comprehensive information including dimensions, materials, care instructions, and warranty details."
+        },
+        {
+          "title": "Room Planner/Visualizer",
+          "subTitle": "Tools to help customers visualize furniture in their own spaces."
+        }
+      ]
+    }
+  },
+  "productCard": {
+    "chair": "Chair"
+  },
+  "productDetail": {
+    "was": "was",
+    "inStock": "InStock",
+    "sold": "Sold",
+    "colors": "Colors",
+    "sizes": "Sizes",
+    "addToCart": "Add to Cart"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "subTitle": "Review Your Items",
+    "items": "Items",
+    "aboutItem": "About the Chair",
+    "total": "Total",
+    "placeOrder": "Place Order"
+  },
+  "footer": {
+    "logo": "Logo",
+    "text": "The advantage of hiring a workspace with us is that givees you comfortable service and all-around facilities.",
+    "links": {
+      "services": {
+        "title": "Services",
+        "items": {
+          "emailMarketing": "Email Marketing",
+          "campaigns": "Campaigns",
+          "branding": "Branding"
+        }
+      },
+      "furniture": {
+        "title": "Furniture",
+        "items": {
+          "beds": "Beds",
+          "chair": "Chair",
+          "all": "All"
+        }
+      },
+      "followUs": {
+        "title": "Follow Us",
+        "items": {
+          "facebook": "Facebook",
+          "twitter": "Twitter",
+          "instagram": "Instagram"
+        }
+      }
+    },
+    "copyright": "Copyright © ",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy"
+  },
+  "toast": {
+    "signInSuccess": "Signed in successfully!",
+    "signInError": "Sign in failed. Please try again.",
+    "signUpSuccess": "Account created successfully!",
+    "signUpError": "Sign up failed. Please try again.",
+    "signOutSuccess": "Signed out successfully!",
+    "signOutError": "Log out failed. Please try again.",
+    "copyProductlinkSuccess": "Link copied to clipboard!",
+    "copyProductlinkFailed": "Could not copy text!",
+    "authWarning": "You Need to Login",
+    "addItemhWarning": "To Add Item to Cart, You Need to Login",
+    "addItemSuccess": "Item added to cart",
+    "removeItemSuccess": "Item removed from cart",
+    "clearCartSuccess": "Cart cleared",
+    "itemActionFailed": "Oops! somthing wrong"
+  }
+}
