@@ -1,12 +1,13 @@
 import ProductDetail from "@/components/ProductDetail";
 import { getProductById } from "@/lib/getDataById";
-import { PropsMetadata } from "@/types";
 import { Metadata } from "next";
 import { cookies } from "next/headers";
 
 export async function generateMetadata({
   params,
-}: PropsMetadata): Promise<Metadata> {
+}: {
+  params: { id: string };
+}): Promise<Metadata> {
   const cookieStore = await cookies();
   const lang = cookieStore.get("language")?.value || "en";
   const { id } = params;
@@ -17,7 +18,7 @@ export async function generateMetadata({
   };
 }
 
-const ProductDetailsPage = async ({ params }: PropsMetadata) => {
+const ProductDetailsPage = async ({ params }: { params: { id: string } }) => {
   const { id } = params;
 
   return <ProductDetail id={id} />;
