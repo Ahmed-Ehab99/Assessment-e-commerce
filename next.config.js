@@ -7,7 +7,7 @@ const nextConfig = {
         hostname: "lh3.googleusercontent.com",
       },
       {
-        protocol: "http",
+        protocol: "https",
         hostname: "test-ecomerce.xn--hrt-w-ova.de",
       },
     ],
